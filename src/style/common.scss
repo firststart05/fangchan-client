@@ -1,0 +1,31 @@
+
+
+// 全局的基本信息
+
+//主要颜色
+
+
+//主要间距大小
+
+
+//主要自号大小
+
+
+@mixin clear(){
+  &:after{content:"."; display:block; clear:both;height:0; visibility:hidden;}
+  zoom:1;
+}
+@mixin clamp($num:1){
+  overflow: hidden;  /** 隐藏超出的内容 **/
+  display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  /* autoprefixer: on */
+  -webkit-line-clamp: $num; /** 显示的行数 **/
+}
+
+@mixin clamp1(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
